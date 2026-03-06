@@ -1,6 +1,6 @@
 CREATE DATABASE cfa_sport;
 
-use cfa_sport;
+use cfa_sport; --selection de la base de données cfa_sport
 
 CREATE Table membres (
     id INT NOT NULL AUTO_INCREMENT,
@@ -25,12 +25,12 @@ INSERT INTO sport (libelle) values ('hanball');
 INSERT INTO sport (libelle) values ('tennis');
 INSERT INTO sport (libelle) values ('baskeball');
 
-CREATE TABLE inscription (
+CREATE TABLE inscription (  --table inscription pour lier les membres et les sports
     id INT NOT NULL AUTO_INCREMENT,
     membre int,
     sport int,
     PRIMARY KEY (id),
-    FOREIGN KEY (membre) REFERENCES membres (id),
+    FOREIGN KEY (membre) REFERENCES membres (id), -- Foreign key pour lier la table inscription à la table membres
     FOREIGN KEY (sport) REFERENCES sport(id)
 );
 /* rendre la table unique */

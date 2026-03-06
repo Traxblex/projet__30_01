@@ -22,9 +22,9 @@
     </tr>
   </thead>
   <tbody>
-    <?php foreach($allMembres as $membre){ ?>
+    <?php foreach($allMembres as $membre){ ?> <!--boucle pour afficher tous les membres de la base de données le $allMembres est un tableau qui contient tous les membres de la base de données et le $membre est une variable qui contient les informations d'un membre à la foi. foreach veut dire  !-->
     <tr>
-      <th scope="row"><?php echo $membre['id']; ?></th> 
+      <th scope="row"><?php echo $membre['id']; ?></th> <!--affichage de l'id du membre -->
       <td><?php echo $membre['genre']; ?></td>
       <td><?php echo $membre['nom']; ?></td>
       <td><?php echo $membre['prenom']; ?></td>
