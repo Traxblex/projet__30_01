@@ -21,6 +21,7 @@
         <a class="nav-link" href="index.php?page=sport">Sport</a>
         <a class="nav-link" href="index.php?page=membre">Membre</a>
         <a class="nav-link" href="index.php?page=coach">Coach</a>
+          <a class="nav-link" href="index.php?page=listInscription">List inscription</a>
       </div>
     </div>
   </div>

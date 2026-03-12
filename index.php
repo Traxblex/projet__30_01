@@ -38,6 +38,9 @@
         case 'ajouterSport':
                 include ('views/sport/ajouterSport.php');
             break; // break veut dire que si $page vaut 'ajouterSport', on inclut le fichier 'views/sport/ajouterSport.php' et on sort du switch
+        case 'listInscription':
+            include ("views/inscription/listInscription.php");
+            break;
         
         default: // Si $page ne correspond à aucun des cas précédents, on inclut le fichier 'views/accueil/accueil.php'
             include ('views/accueil/accueil.php');
