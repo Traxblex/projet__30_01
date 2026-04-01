@@ -4,24 +4,21 @@ include('../../BDD/bdd.php');
 
     if (isset($_POST['valider'])) {
         # code ....
-        $genre = $_POST['genre'];
+        $disponible = $_POST['disponible'];
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
         $email = $_POST['email'];
-        $mdp = $_POST['mdp'];
         $telephone = $_POST['telephone'];
-        $adresse = $_POST['adresse'];
+        $domaine = $_POST['domaine'];
 
-        $req = $bdd->prepare('INSERT INTO membres (genre, nom, prenom, email, mdp, telephone, adresse) values (:genre, :nom, :prenom, :email, :mdp, :telephone, :adresse)');
+        $req = $bdd->prepare('INSERT INTO coach (disponible, nom, prenom, email, telephone, domaine) values (:disponible, :nom, :prenom, :email, :telephone, :domaine)');
 
-        $req ->bindParam(':genre',$genre); 
+        $req ->bindParam(':disponible',$disponible); 
         $req ->bindParam(':nom',$nom); 
         $req ->bindParam(':prenom',$prenom); 
         $req ->bindParam(':email',$email); 
-        $req ->bindParam(':mdp',$mdp); 
         $req ->bindParam(':telephone',$telephone); 
-        $req ->bindParam(':adresse',$adresse); 
-
+        $req ->bindParam(':domaine',$domaine); 
         $req->execute();
 
         header('location:http://127.0.0.1/Promo321/info/cours_info_shapeche/projet__30_01/index.php?page=membre');

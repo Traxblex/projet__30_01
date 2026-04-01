@@ -41,7 +41,19 @@
         case 'listInscription':
             include ("views/inscription/listInscription.php");
             break;
+        case "ajouterInscription":
+            include ("views/inscription/ajouterInscription.php");
+            break;
+
         
+        case "detailCoach" :
+            include ("views/coach/detailCoach.php");
+        break;
+
+        case "ajouterCoach" :
+            include ("views/coach/ajouterCoach.php");
+        break;
+
         default: // Si $page ne correspond à aucun des cas précédents, on inclut le fichier 'views/accueil/accueil.php'
             include ('views/accueil/accueil.php');
             break; // break n'est pas nécessaire ici, mais il est bon de le mettre pour éviter des erreurs si on ajoute d'autres cas à l'avenir

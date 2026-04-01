@@ -14,6 +14,18 @@ CREATE Table membres (
     PRIMARY KEY(id)
 );
 
+CREATE Table Coach  (
+    id INT NOT NULL AUTO_INCREMENT,
+    nom VARCHAR(255) NOT NULL,
+    prenom VARCHAR(255) NOT NULL,
+    domaine varchar(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    mdp VARCHAR(255) NOT NULL,
+    telephone VARCHAR(255) NOT NULL UNIQUE,
+    disponible BOOLEAN,
+    PRIMARY KEY(id)
+);
+
 CREATE TABLE sport (
     id INT NOT NULL AUTO_INCREMENT,
     libelle VARCHAR (255) NOT NULL,
@@ -33,6 +45,8 @@ CREATE TABLE inscription (  --table inscription pour lier les membres et les spo
     FOREIGN KEY (membre) REFERENCES membres (id), -- Foreign key pour lier la table inscription à la table membres
     FOREIGN KEY (sport) REFERENCES sport(id)
 );
+
+ALTER  TABLE inscription ADD date_inscription date NOT NULL;
 /* rendre la table unique */
 ALTER TABLE `sport` ADD UNIQUE(`libelle`);
 /* trs insert membre*/

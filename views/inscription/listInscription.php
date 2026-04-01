@@ -6,6 +6,7 @@
     <h1>
         liste Inscription
     </h1>
+    <a href="index.php?page=ajouterInscription">S'inscrire</a>
 </div>
 <table class="table">
     <thead>
@@ -14,6 +15,7 @@
         <th scope="col">Nom Membre</th>
         <th scope="col">Prenom Membre</th>
         <th scope="col">Sport Libelle</th>
+        <th scope="col">date_inscription</th>
     </tr>
     </thead>
     <tbody>
@@ -23,6 +25,7 @@
         <td><?php echo $inscrit['nom']; ?></td>
         <td><?php echo $inscrit['prenom']; ?></td>
         <td><?php echo $inscrit['libelle']; ?></td>
+        <td><?php echo $inscrit['date_inscription']; ?></td>
     </tr>
     <?php } ?>
     </tbody>
